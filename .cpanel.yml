@@ -1,7 +1,4 @@
 deployment:
   tasks:
-    - cd /home/bluebugs/vite-app
-    - npm install
-    - npm run build
     - rm -rf /home/bluebugs/public_html/*
     - cp -r dist/* /home/bluebugs/public_html/
