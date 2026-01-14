@@ -1,4 +1,5 @@
+---
 deployment:
   tasks:
-    - rm -rf /home/bluebugs/public_html/*
-    - cp -r dist/* /home/bluebugs/public_html/
+    - export DEPLOYPATH=/home/bluebugs/public_html
+    - rsync -av --delete dist/ $DEPLOYPATH/
