@@ -22,3 +22,7 @@ node_modules
 *.sln
 *.sw?
 # hey
+
+
+app.js
+tmp/
