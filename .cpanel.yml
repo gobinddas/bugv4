@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bluebugs/public_html
-    - rsync -av --delete dist/ $DEPLOYPATH/
+    - /usr/bin/rsync -avz --delete dist/ $DEPLOYPATH
