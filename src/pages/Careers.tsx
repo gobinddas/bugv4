@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { MapPin, Briefcase, Clock, ArrowRight, CheckCircle } from "lucide-react";
+import {
+  MapPin,
+  Briefcase,
+  Clock,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,63 +16,19 @@ import { toast } from "sonner";
 
 const jobs = [
   {
-    id: "1",
-    title: "Senior React Developer",
-    department: "Engineering",
-    type: "Full-time",
-    location: "Kathmandu, Nepal",
-    description: "We're looking for an experienced React developer to join our team and help build amazing web applications for our clients.",
-    requirements: [
-      "5+ years of experience with React.js",
-      "Strong understanding of TypeScript",
-      "Experience with state management (Redux, MobX)",
-      "Familiarity with modern build tools",
-      "Excellent problem-solving skills",
-    ],
-  },
-  {
     id: "2",
     title: "Mobile App Developer",
     department: "Engineering",
-    type: "Full-time",
-    location: "Kathmandu, Nepal",
-    description: "Join our mobile team to develop cross-platform applications using React Native.",
+    type: "Part Time",
+    location: "Remote",
+    description:
+      "Join our mobile team to develop cross-platform applications using React Native.",
     requirements: [
       "3+ years of React Native experience",
       "Published apps on App Store and Play Store",
       "Understanding of native modules",
       "Experience with app performance optimization",
       "Team collaboration skills",
-    ],
-  },
-  {
-    id: "3",
-    title: "UI/UX Designer",
-    department: "Design",
-    type: "Full-time",
-    location: "Kathmandu, Nepal",
-    description: "We need a creative designer to craft beautiful and intuitive user interfaces for our web and mobile projects.",
-    requirements: [
-      "3+ years of UI/UX design experience",
-      "Proficiency in Figma and Adobe Suite",
-      "Strong portfolio showcasing web/mobile design",
-      "Understanding of design systems",
-      "User research experience",
-    ],
-  },
-  {
-    id: "4",
-    title: "Digital Marketing Specialist",
-    department: "Marketing",
-    type: "Full-time",
-    location: "Kathmandu, Nepal",
-    description: "Help our clients grow their online presence through strategic digital marketing campaigns.",
-    requirements: [
-      "3+ years of digital marketing experience",
-      "Experience with SEO, SEM, and social media",
-      "Data-driven approach to marketing",
-      "Content creation skills",
-      "Strong analytical skills",
     ],
   },
 ];
@@ -86,7 +48,9 @@ const Careers = () => {
       toast.error("Please fill in all required fields");
       return;
     }
-    toast.success("Application submitted successfully! We'll be in touch soon.");
+    toast.success(
+      "Application submitted successfully! We'll be in touch soon.",
+    );
     setFormData({ name: "", email: "", phone: "", coverLetter: "" });
     setSelectedJob(null);
   };
@@ -109,8 +73,9 @@ const Careers = () => {
               Build Your Career with Us
             </h1>
             <p className="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto">
-              Join a team of passionate professionals dedicated to creating exceptional digital solutions. 
-              Grow your skills while working on exciting projects.
+              Join a team of passionate professionals dedicated to creating
+              exceptional digital solutions. Grow your skills while working on
+              exciting projects.
             </p>
           </motion.div>
         </div>
@@ -130,16 +95,29 @@ const Careers = () => {
               Why Join Blue Bug?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We offer a dynamic work environment with opportunities for growth and learning.
+              We offer a dynamic work environment with opportunities for growth
+              and learning.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Competitive Salary", desc: "Industry-leading compensation packages" },
-              { title: "Learning Budget", desc: "Annual budget for courses and conferences" },
-              { title: "Flexible Hours", desc: "Work-life balance is our priority" },
-              { title: "Growth Path", desc: "Clear career progression opportunities" },
+              {
+                title: "Competitive Salary",
+                desc: "Industry-leading compensation packages",
+              },
+              {
+                title: "Learning Budget",
+                desc: "Annual budget for courses and conferences",
+              },
+              {
+                title: "Flexible Hours",
+                desc: "Work-life balance is our priority",
+              },
+              {
+                title: "Growth Path",
+                desc: "Clear career progression opportunities",
+              },
             ].map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -189,7 +167,9 @@ const Careers = () => {
               >
                 <div
                   className="p-6 cursor-pointer"
-                  onClick={() => setSelectedJob(selectedJob === job.id ? null : job.id)}
+                  onClick={() =>
+                    setSelectedJob(selectedJob === job.id ? null : job.id)
+                  }
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div>
@@ -213,7 +193,9 @@ const Careers = () => {
                     </div>
                     <Button variant="outline" size="sm">
                       {selectedJob === job.id ? "Close" : "View Details"}
-                      <ArrowRight className={`w-4 h-4 ml-2 transition-transform ${selectedJob === job.id ? "rotate-90" : ""}`} />
+                      <ArrowRight
+                        className={`w-4 h-4 ml-2 transition-transform ${selectedJob === job.id ? "rotate-90" : ""}`}
+                      />
                     </Button>
                   </div>
                 </div>
@@ -226,12 +208,19 @@ const Careers = () => {
                     className="px-6 pb-6 border-t border-border"
                   >
                     <div className="pt-6">
-                      <p className="text-muted-foreground mb-6">{job.description}</p>
-                      
-                      <h4 className="font-semibold text-foreground mb-3">Requirements</h4>
+                      <p className="text-muted-foreground mb-6">
+                        {job.description}
+                      </p>
+
+                      <h4 className="font-semibold text-foreground mb-3">
+                        Requirements
+                      </h4>
                       <ul className="space-y-2 mb-8">
                         {job.requirements.map((req) => (
-                          <li key={req} className="flex items-start gap-3 text-muted-foreground">
+                          <li
+                            key={req}
+                            className="flex items-start gap-3 text-muted-foreground"
+                          >
                             <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                             {req}
                           </li>
@@ -240,7 +229,9 @@ const Careers = () => {
 
                       {/* Application Form */}
                       <div className="bg-muted/50 rounded-xl p-6">
-                        <h4 className="font-semibold text-foreground mb-4">Apply for this position</h4>
+                        <h4 className="font-semibold text-foreground mb-4">
+                          Apply for this position
+                        </h4>
                         <form onSubmit={handleSubmit} className="space-y-4">
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
@@ -248,7 +239,12 @@ const Careers = () => {
                               <Input
                                 id="name"
                                 value={formData.name}
-                                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    name: e.target.value,
+                                  })
+                                }
                                 placeholder="Your full name"
                                 required
                               />
@@ -259,7 +255,12 @@ const Careers = () => {
                                 id="email"
                                 type="email"
                                 value={formData.email}
-                                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                                onChange={(e) =>
+                                  setFormData({
+                                    ...formData,
+                                    email: e.target.value,
+                                  })
+                                }
                                 placeholder="your@email.com"
                                 required
                               />
@@ -270,7 +271,12 @@ const Careers = () => {
                             <Input
                               id="phone"
                               value={formData.phone}
-                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                              onChange={(e) =>
+                                setFormData({
+                                  ...formData,
+                                  phone: e.target.value,
+                                })
+                              }
                               placeholder="+977 98XXXXXXXX"
                             />
                           </div>
@@ -279,7 +285,12 @@ const Careers = () => {
                             <Textarea
                               id="coverLetter"
                               value={formData.coverLetter}
-                              onChange={(e) => setFormData({ ...formData, coverLetter: e.target.value })}
+                              onChange={(e) =>
+                                setFormData({
+                                  ...formData,
+                                  coverLetter: e.target.value,
+                                })
+                              }
                               placeholder="Tell us why you're interested in this position..."
                               rows={4}
                             />

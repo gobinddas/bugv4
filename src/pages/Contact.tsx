@@ -12,22 +12,18 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@bluebugsoftware.com", "support@bluebugsoftware.com"],
+    details: ["info@bluebugsoft.com", "bluebugsoft1@gmail.com"],
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+977 1 234 567 890", "+977 98XXXXXXXX"],
+    details: ["+977 9825147838"],
   },
-  {
-    icon: MapPin,
-    title: "Visit Us",
-    details: ["Thamel, Kathmandu", "Nepal"],
-  },
+
   {
     icon: Clock,
     title: "Working Hours",
-    details: ["Sun - Fri: 9:00 AM - 6:00 PM", "Sat: Closed"],
+    details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat - Sun: Closed"],
   },
 ];
 
@@ -43,14 +39,18 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
       toast.error("Please fill in all required fields");
       return;
     }
-    
+
     setIsSubmitting(true);
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     toast.success("Message sent successfully! We'll get back to you soon.");
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     setIsSubmitting(false);
@@ -74,7 +74,8 @@ const Contact = () => {
               Let's Start a Conversation
             </h1>
             <p className="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto">
-              Have a project in mind or want to learn more about our services? We'd love to hear from you.
+              Have a project in mind or want to learn more about our services?
+              We'd love to hear from you.
             </p>
           </motion.div>
         </div>
@@ -83,7 +84,7 @@ const Contact = () => {
       {/* Contact Info Cards */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
             {contactInfo.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -96,9 +97,13 @@ const Contact = () => {
                 <div className="w-12 h-12 mx-auto rounded-xl gradient-bg flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="font-display font-semibold text-foreground mb-2">{item.title}</h3>
+                <h3 className="font-display font-semibold text-foreground mb-2">
+                  {item.title}
+                </h3>
                 {item.details.map((detail, i) => (
-                  <p key={i} className="text-muted-foreground text-sm">{detail}</p>
+                  <p key={i} className="text-muted-foreground text-sm">
+                    {detail}
+                  </p>
                 ))}
               </motion.div>
             ))}
@@ -123,7 +128,9 @@ const Contact = () => {
                     <Input
                       id="name"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       placeholder="Your full name"
                       required
                     />
@@ -134,7 +141,9 @@ const Contact = () => {
                       id="email"
                       type="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       placeholder="your@email.com"
                       required
                     />
@@ -146,7 +155,9 @@ const Contact = () => {
                     <Input
                       id="phone"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                       placeholder="+977 98XXXXXXXX"
                     />
                   </div>
@@ -155,7 +166,9 @@ const Contact = () => {
                     <Input
                       id="subject"
                       value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, subject: e.target.value })
+                      }
                       placeholder="How can we help?"
                     />
                   </div>
@@ -165,7 +178,9 @@ const Contact = () => {
                   <Textarea
                     id="message"
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     placeholder="Tell us about your project..."
                     rows={6}
                     required
@@ -191,7 +206,7 @@ const Contact = () => {
               </h2>
               <div className="h-[calc(100%-4rem)] rounded-2xl overflow-hidden border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2705067789655!2d85.30742787546855!3d27.71539097618237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18fcb77fd4bd%3A0x58099b1deffed8d4!2sThamel%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1704124800000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7062.722572945931!2d85.3554975866539!3d27.73700044920578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b4a5799bd93%3A0xd7e9678946369a03!2sBluebug%20Software!5e0!3m2!1sen!2snp!4v1769485632933!5m2!1sen!2snp"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

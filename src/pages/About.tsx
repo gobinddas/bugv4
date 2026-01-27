@@ -6,12 +6,14 @@ const values = [
   {
     icon: Target,
     title: "Innovation First",
-    description: "We constantly explore new technologies to deliver cutting-edge solutions.",
+    description:
+      "We constantly explore new technologies to deliver cutting-edge solutions.",
   },
   {
     icon: Eye,
     title: "Client Focus",
-    description: "Your success is our priority. We build solutions that drive real results.",
+    description:
+      "Your success is our priority. We build solutions that drive real results.",
   },
   {
     icon: Users,
@@ -21,23 +23,44 @@ const values = [
   {
     icon: Award,
     title: "Quality Assured",
-    description: "Rigorous testing and quality standards ensure reliable deliverables.",
+    description:
+      "Rigorous testing and quality standards ensure reliable deliverables.",
   },
 ];
 
 const stats = [
-  { value: "150+", label: "Projects Completed" },
-  { value: "50+", label: "Happy Clients" },
-  { value: "15+", label: "Team Members" },
-  { value: "5+", label: "Years in Business" },
+  { value: "30+", label: "Projects Completed" },
+  { value: "23+", label: "Happy Clients" },
+  { value: "10+", label: "Team Members" },
+  { value: "7+", label: "Years in Business" },
 ];
 
 const milestones = [
-  { year: "2019", title: "Company Founded", description: "Started with a vision to transform digital Nepal." },
-  { year: "2020", title: "First Major Client", description: "Partnered with leading enterprises for software solutions." },
-  { year: "2021", title: "Team Expansion", description: "Grew to 10+ dedicated professionals." },
-  { year: "2022", title: "Product Launch", description: "Released our first SaaS product." },
-  { year: "2023", title: "Regional Recognition", description: "Awarded Best Software Company in Nepal." },
+  {
+    year: "2019",
+    title: "Company Founded",
+    description: "Started with a vision to transform digital Nepal.",
+  },
+  {
+    year: "2020",
+    title: "First Major Client",
+    description: "Partnered with leading enterprises for software solutions.",
+  },
+  {
+    year: "2021",
+    title: "Team Expansion",
+    description: "Grew to 10+ dedicated professionals.",
+  },
+  {
+    year: "2022",
+    title: "Product Launch",
+    description: "Released our first SaaS product.",
+  },
+  {
+    year: "2023",
+    title: "Regional Recognition",
+    description: "Trusted by clients",
+  },
 ];
 
 const About = () => {
@@ -59,8 +82,9 @@ const About = () => {
               Crafting Digital Excellence Since 2019
             </h1>
             <p className="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto">
-              Blue Bug Software is a leading software development company based in Kathmandu, Nepal. 
-              We specialize in creating innovative digital solutions that help businesses thrive.
+              Blue Bug Software is a leading software development company based
+              in Kathmandu, Nepal. We specialize in creating innovative digital
+              solutions that help businesses thrive.
             </p>
           </motion.div>
         </div>
@@ -83,13 +107,23 @@ const About = () => {
                 Empowering Businesses Through Technology
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                At Blue Bug Software, our mission is to deliver exceptional software solutions that 
-                empower businesses to achieve their goals. We believe in the transformative power of 
-                technology and are committed to making it accessible to organizations of all sizes.
+                At Blue Bug Software, our mission is to deliver exceptional
+                software solutions that empower businesses to achieve their
+                goals. We believe in the transformative power of technology and
+                are committed to making it accessible to organizations of all
+                sizes.
               </p>
               <ul className="space-y-3">
-                {["Client-centric approach", "Innovative solutions", "Quality craftsmanship", "Long-term partnerships"].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-foreground">
+                {[
+                  "Client-centric approach",
+                  "Innovative solutions",
+                  "Quality craftsmanship",
+                  "Long-term partnerships",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-foreground"
+                  >
                     <CheckCircle className="w-5 h-5 text-primary shrink-0" />
                     {item}
                   </li>
@@ -152,9 +186,7 @@ const About = () => {
                 <h3 className="text-xl font-display font-semibold text-foreground mb-3">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground">
-                  {value.description}
-                </p>
+                <p className="text-muted-foreground">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -224,7 +256,9 @@ const About = () => {
                   <h3 className="text-xl font-display font-semibold text-foreground mb-2">
                     {milestone.title}
                   </h3>
-                  <p className="text-muted-foreground">{milestone.description}</p>
+                  <p className="text-muted-foreground">
+                    {milestone.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

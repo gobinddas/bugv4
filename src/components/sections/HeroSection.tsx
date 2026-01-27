@@ -7,7 +7,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 const stats = [
   { value: "30+", label: "Projects Delivered" },
   { value: "23+", label: "Happy Clients" },
-  { value: "3+", label: "Years Experience" },
+  { value: "7+", label: "Years Experience" },
   { value: "10+", label: "Team Members" },
 ];
 
@@ -29,8 +29,6 @@ export function HeroSection() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-blue-950/90 via-blue-950/80 to-blue-950/95" />
       </div>
-
-     
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -62,8 +60,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-blue-200 mb-10 max-w-2xl mx-auto"
           >
-            Nepal's premier software development company delivering cutting-edge web, mobile, 
-            and software solutions that drive business growth and innovation.
+            Nepal's premier software development company delivering cutting-edge
+            web, mobile, and software solutions that drive business growth and
+            innovation.
           </motion.p>
 
           <motion.div
@@ -72,15 +71,25 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <Button asChild size="lg" className="group bg-cyan-500 hover:bg-cyan-600 text-blue-950 font-semibold px-8">
+            <Button
+              asChild
+              size="lg"
+              className="group bg-cyan-500 hover:bg-cyan-600 text-blue-950 font-semibold px-8"
+            >
               <Link to="/contact">
                 Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="group border-blue-400 text-blue-100 bg-blue-900/50">
-              <Link to="/projects">View Our Work
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="group border-blue-400 text-blue-100 bg-blue-900/50"
+            >
+              <Link to="/projects">
+                View Our Work
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </motion.div>
