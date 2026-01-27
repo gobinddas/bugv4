@@ -3,19 +3,20 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import brandLogo from "../../assets/images/brand.png";
 
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { 
-    label: "Services", 
+  {
+    label: "Services",
     href: "/services",
     children: [
       { label: "Website Designing", href: "/services#web-design" },
       { label: "Software Development", href: "/services#software" },
       { label: "Mobile App Development", href: "/services#mobile" },
       { label: "Social Media Handling", href: "/services#social-media" },
-    ]
+    ],
   },
   { label: "Projects", href: "/projects" },
   { label: "Products", href: "/products" },
@@ -39,16 +40,15 @@ export function Header() {
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-         <Link to="/" className="flex items-center gap-3 group">
-  <div className="w-32 lg:w-64 rounded-lg flex items-center justify-center overflow-hidden">
-    <img
-      src="public/images/brand.png"
-      alt="Brand"
-      className="w-full h-full object-contain"
-    />
-  </div>
-</Link>
-
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="w-32 lg:w-64 rounded-lg flex items-center justify-center overflow-hidden">
+              <img
+                src={brandLogo}
+                alt="Brand"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
@@ -56,7 +56,9 @@ export function Header() {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => item.children && setOpenDropdown(item.label)}
+                onMouseEnter={() =>
+                  item.children && setOpenDropdown(item.label)
+                }
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <Link
@@ -70,7 +72,7 @@ export function Header() {
                   {item.label}
                   {item.children && <ChevronDown className="w-4 h-4" />}
                 </Link>
-                
+
                 {/* Dropdown */}
                 {item.children && openDropdown === item.label && (
                   <motion.div
@@ -106,7 +108,11 @@ export function Header() {
             className="lg:hidden p-2 text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </nav>

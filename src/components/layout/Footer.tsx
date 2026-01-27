@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+} from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import brandLogo from "../../assets/images/brand_white.png";
 import { toast } from "sonner";
 
 const footerLinks = {
@@ -26,11 +36,27 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com/bluebugsoftware.np", label: "Facebook" },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/bluebugsoftware.np",
+    label: "Facebook",
+  },
   { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/bluebug-software", label: "LinkedIn" },
-  { icon: Instagram, href: "https://www.instagram.com/bluebug.soft/", label: "Instagram" },
-  { icon: Github, href: "https://github.com/bluebug-developer", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/bluebug-software",
+    label: "LinkedIn",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/bluebug.soft/",
+    label: "Instagram",
+  },
+  {
+    icon: Github,
+    href: "https://github.com/bluebug-developer",
+    label: "GitHub",
+  },
 ];
 
 export function Footer() {
@@ -54,22 +80,28 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
               <div className=" w-32 lg:w-64 rounded-lg  flex items-center justify-center">
-                <img src="public/images/brand_white.png" />
+                <img src={brandLogo} />
               </div>
-             
             </Link>
             <p className="text-blue-200 mb-6 max-w-sm">
-              Transforming ideas into powerful digital solutions. Your trusted partner for web development, 
-              mobile apps, and software solutions in Nepal.
+              Transforming ideas into powerful digital solutions. Your trusted
+              partner for web development, mobile apps, and software solutions
+              in Nepal.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="mailto:info@bluebugsoft.com" className="flex items-center gap-3 text-blue-200 hover:text-cyan-400 transition-colors">
+              <a
+                href="mailto:info@bluebugsoft.com"
+                className="flex items-center gap-3 text-blue-200 hover:text-cyan-400 transition-colors"
+              >
                 <Mail className="w-5 h-5" />
                 <span>info@bluebugsoft.com</span>
               </a>
-              <a href="tel:+9779825147838" className="flex items-center gap-3 text-blue-200 hover:text-cyan-400 transition-colors">
+              <a
+                href="tel:+9779825147838"
+                className="flex items-center gap-3 text-blue-200 hover:text-cyan-400 transition-colors"
+              >
                 <Phone className="w-5 h-5" />
                 <span>+977 9825147838</span>
               </a>
@@ -82,11 +114,16 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-display font-semibold text-blue-50 mb-4">Company</h4>
+            <h4 className="font-display font-semibold text-blue-50 mb-4">
+              Company
+            </h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-blue-200 hover:text-cyan-400 transition-colors">
+                  <Link
+                    to={link.href}
+                    className="text-blue-200 hover:text-cyan-400 transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -96,11 +133,16 @@ export function Footer() {
 
           {/* Services Links */}
           <div>
-            <h4 className="font-display font-semibold text-blue-50 mb-4">Services</h4>
+            <h4 className="font-display font-semibold text-blue-50 mb-4">
+              Services
+            </h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-blue-200 hover:text-cyan-400 transition-colors">
+                  <Link
+                    to={link.href}
+                    className="text-blue-200 hover:text-cyan-400 transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -110,11 +152,16 @@ export function Footer() {
 
           {/* Products & Newsletter */}
           <div>
-            <h4 className="font-display font-semibold text-blue-50 mb-4">Products</h4>
+            <h4 className="font-display font-semibold text-blue-50 mb-4">
+              Products
+            </h4>
             <ul className="space-y-3 mb-8">
               {footerLinks.products.map((link) => (
                 <li key={link.label}>
-                  <Link to={link.href} className="text-blue-200 hover:text-cyan-400 transition-colors">
+                  <Link
+                    to={link.href}
+                    className="text-blue-200 hover:text-cyan-400 transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -127,10 +174,17 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-blue-800">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div>
-              <h4 className="font-display font-semibold text-blue-50 mb-2">Subscribe to our Newsletter</h4>
-              <p className="text-blue-200">Stay updated with the latest tech insights and company news.</p>
+              <h4 className="font-display font-semibold text-blue-50 mb-2">
+                Subscribe to our Newsletter
+              </h4>
+              <p className="text-blue-200">
+                Stay updated with the latest tech insights and company news.
+              </p>
             </div>
-            <form onSubmit={handleNewsletterSubmit} className="flex gap-3 w-full lg:w-auto">
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex gap-3 w-full lg:w-auto"
+            >
               <Input
                 type="email"
                 placeholder="Enter your email"
@@ -138,7 +192,10 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-blue-900/50 border-blue-700 text-blue-50 placeholder:text-blue-400 w-full lg:w-72"
               />
-              <Button type="submit" className="bg-cyan-500 hover:bg-cyan-600 text-blue-950 shrink-0">
+              <Button
+                type="submit"
+                className="bg-cyan-500 hover:bg-cyan-600 text-blue-950 shrink-0"
+              >
                 Subscribe
               </Button>
             </form>
@@ -150,7 +207,7 @@ export function Footer() {
           <p className="text-blue-300 text-sm">
             © {new Date().getFullYear()} Blue Bug Software. All rights reserved.
           </p>
-          
+
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
