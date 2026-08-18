@@ -6,24 +6,30 @@ const testimonials = [
     id: 1,
     name: "Rajesh Sharma",
     role: "CEO, TechNepal Pvt. Ltd.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-    content: "Blue Bug Software delivered an exceptional e-commerce platform for our business. Their team's expertise and dedication exceeded our expectations. Highly recommended!",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+    content:
+      "WinSoc IT Solutions delivered an exceptional e-commerce platform for our business. Their team's expertise and dedication exceeded our expectations. Highly recommended!",
     rating: 5,
   },
   {
     id: 2,
     name: "Sunita Thapa",
     role: "Director, Himalayan Hotels",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
-    content: "The hotel booking system they built for us has transformed our operations. Professional team, excellent communication, and outstanding results.",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
+    content:
+      "The hotel booking system they built for us has transformed our operations. Professional team, excellent communication, and outstanding results.",
     rating: 5,
   },
   {
     id: 3,
     name: "Amit Gurung",
     role: "Founder, HealthFirst App",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
-    content: "Our healthcare app has received amazing feedback from users. Blue Bug's mobile development team created an intuitive and reliable solution.",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+    content:
+      "Our healthcare app has received amazing feedback from users. WinSoc's mobile development team created an intuitive and reliable solution.",
     rating: 5,
   },
 ];
@@ -51,7 +57,8 @@ export function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our valued clients have to say about working with us.
+            Don't just take our word for it. Here's what our valued clients have
+            to say about working with us.
           </p>
         </motion.div>
 
@@ -74,7 +81,10 @@ export function TestimonialsSection() {
               {/* Rating */}
               <div className="flex gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-amber-400 text-amber-400"
+                  />
                 ))}
               </div>
 
@@ -91,8 +101,12 @@ export function TestimonialsSection() {
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                  <div className="font-semibold text-foreground">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonial.role}
+                  </div>
                 </div>
               </div>
             </motion.div>

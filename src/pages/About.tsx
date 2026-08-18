@@ -82,9 +82,9 @@ const About = () => {
               Crafting Digital Excellence Since 2019
             </h1>
             <p className="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto">
-              Blue Bug Software is a leading software development company based
-              in Kathmandu, Nepal. We specialize in creating innovative digital
-              solutions that help businesses thrive.
+              WinSoc IT Solutions is a leading software development company
+              based in Kathmandu, Nepal. We specialize in creating innovative
+              digital solutions that help businesses thrive.
             </p>
           </motion.div>
         </div>
@@ -107,7 +107,7 @@ const About = () => {
                 Empowering Businesses Through Technology
               </h2>
               <p className="text-muted-foreground text-lg mb-6">
-                At Blue Bug Software, our mission is to deliver exceptional
+                At WinSoc IT Solutions, our mission is to deliver exceptional
                 software solutions that empower businesses to achieve their
                 goals. We believe in the transformative power of technology and
                 are committed to making it accessible to organizations of all

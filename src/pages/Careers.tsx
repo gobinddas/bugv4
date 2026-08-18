@@ -31,6 +31,19 @@ const jobs = [
       "Team collaboration skills",
     ],
   },
+  {
+    id: "3",
+    title: "CSR and Support",
+    department: "Support",
+    type: "Full Time",
+    location: "hybrid",
+    description: "Join our team for support and CSR role ",
+    requirements: [
+      "Understanding the client requirement",
+      "Experience with Call handaling",
+      "Team collaboration skills",
+    ],
+  },
 ];
 
 const Careers = () => {
@@ -92,7 +105,7 @@ const Careers = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-              Why Join Blue Bug?
+              Why Join WinSoc?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               We offer a dynamic work environment with opportunities for growth

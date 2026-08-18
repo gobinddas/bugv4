@@ -41,7 +41,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-32 lg:w-64 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-32 lg:w-32 rounded-lg flex items-center justify-center overflow-hidden">
               <img
                 src={brandLogo}
                 alt="Brand"

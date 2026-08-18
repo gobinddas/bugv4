@@ -12,12 +12,12 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@bluebugsoft.com", "bluebugsoft1@gmail.com"],
+    details: ["info@winsocit.com", "winsocitsolution@gmail.com"],
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+977 9825147838"],
+    details: ["+977 9705365656"],
   },
 
   {
@@ -206,14 +206,14 @@ const Contact = () => {
               </h2>
               <div className="h-[calc(100%-4rem)] rounded-2xl overflow-hidden border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7062.722572945931!2d85.3554975866539!3d27.73700044920578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b4a5799bd93%3A0xd7e9678946369a03!2sBluebug%20Software!5e0!3m2!1sen!2snp!4v1769485632933!5m2!1sen!2snp"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d683.8966681877369!2d85.35039472606665!3d27.734272559755187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb197ce0f42ca7%3A0xdb9d5731fe1fbdde!2sWinsoc%20IT%20Solution!5e1!3m2!1sen!2snp!4v1787062944397!5m2!1sen!2snp"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Blue Bug Software Location"
+                  title="WinSoc IT Solutions Location"
                 />
               </div>
             </motion.div>
@@ -225,3 +225,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
+{
+  /* <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> */
+}

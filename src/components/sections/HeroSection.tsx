@@ -40,7 +40,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-cyan-400 text-sm font-medium backdrop-blur-sm border border-primary/30">
               <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-              Welcome to Blue Bug Software
+              Welcome to WinSoc IT Solutions
             </span>
           </motion.div>
 

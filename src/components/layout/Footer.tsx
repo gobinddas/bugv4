@@ -38,23 +38,23 @@ const footerLinks = {
 const socialLinks = [
   {
     icon: Facebook,
-    href: "https://www.facebook.com/bluebugsoftware.np",
+    href: "https://www.facebook.com",
     label: "Facebook",
   },
   { icon: Twitter, href: "#", label: "Twitter" },
   {
     icon: Linkedin,
-    href: "https://www.linkedin.com/company/bluebug-software",
+    href: "https://www.linkedin.com",
     label: "LinkedIn",
   },
   {
     icon: Instagram,
-    href: "https://www.instagram.com/bluebug.soft/",
+    href: "https://www.instagram.com",
     label: "Instagram",
   },
   {
     icon: Github,
-    href: "https://github.com/bluebug-developer",
+    href: "https://github.com/",
     label: "GitHub",
   },
 ];
@@ -92,18 +92,18 @@ export function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="mailto:info@bluebugsoft.com"
+                href="mailto:info@winsocit.com"
                 className="flex items-center gap-3 text-blue-200 hover:text-cyan-400 transition-colors"
               >
                 <Mail className="w-5 h-5" />
-                <span>info@bluebugsoft.com</span>
+                <span>info@winsocit.com</span>
               </a>
               <a
                 href="tel:+9779825147838"
                 className="flex items-center gap-3 text-blue-200 hover:text-cyan-400 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                <span>+977 9825147838</span>
+                <span>+977 9705365656</span>
               </a>
               <div className="flex items-start gap-3 text-blue-200">
                 <MapPin className="w-5 h-5 mt-0.5" />
@@ -205,7 +205,8 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-blue-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="text-blue-300 text-sm">
-            © {new Date().getFullYear()} Blue Bug Software. All rights reserved.
+            © {new Date().getFullYear()} WinSoc IT Solutions. All rights
+            reserved.
           </p>
 
           {/* Social Links */}
